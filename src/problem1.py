@@ -2,8 +2,8 @@
 Exam 2, problem 1.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  April 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Aaron Kondrat.  April 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the code of the  Rect  class below.
+# DONE: 2.  READ the code of the  Rect  class below.
 #
 #   Once you are confident that you understand the  Rect  class and its code,
 #   change the TO-DO for this problem to DONE.
@@ -36,6 +36,20 @@ def run_test_problem1():
     print('Testing the   problem1   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    rectangles = [Rect(5, 10), Rect(4, 3), Rect(100, 7)]
+    expected = 762
+    actual = problem1(rectangles)
+    print('Expected:', expected)
+    print('Actual  :', actual)
+
+    # Test 2:
+    rectangles = [Rect(2, 2), Rect(12, 40), Rect(29, 141)]
+    expected = 4573
+    actual = problem1(rectangles)
+    print('Expected:', expected)
+    print('Actual  :', actual)
+
 
 def problem1(rectangles):
     """
@@ -52,6 +66,12 @@ def problem1(rectangles):
     :param rectangles: [Rect]
     :return: int
     """
+    total = 0
+    for k in range(len(rectangles)):
+        rectangle = rectangles[k]
+        area = rectangle.w * rectangle.h
+        total = total + area
+    return total
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
     # -------------------------------------------------------------------------
