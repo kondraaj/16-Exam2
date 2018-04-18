@@ -153,8 +153,17 @@ def problem2(n, seq):
       :type n:    int
       :type seq:  [int]
     """
+    count = 0
+    answer = []
+    for k in range(len(seq)):
+        if seq[k] < n:
+            answer = answer + [seq[k]]
+            count = count + 1
+        if count == 3:
+            return answer
+    return 'Too few'
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
