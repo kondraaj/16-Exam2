@@ -44,31 +44,39 @@ class Person(object):
         What comes in:  The Person's age.
         Side effects: Sets instance variables as needed by the other methods.
         """
-        # TODO: Implement and test this method.
+        self.age = age
+        # DONE: Implement and test this method.
 
     def get_age(self):
         """ Returns this Person's age. """
-        # TODO: Implement and test this method.
+        return self.age
+        # DONE: Implement and test this method.
 
     def celebrate_birthday(self):
         """
         Increments this Person's age.
         ALso prints 'Happy birthday!'.
         """
-        # TODO: Implement and test this method.
+        self.age = self.age + 1
+        print('Happy Birthday')
+        # DONE: Implement and test this method.
 
     def celebrate_birthdays(self, n):
         """
         What comes in: A non-negative integer n.
         Side effects:  Calls the  celebrate_birthday  method  n  times.
         """
-        # TODO: Implement and test this method.
+        for k in range(n):
+            self.celebrate_birthday()
+        # DONE: Implement and test this method.
 
     def older_person(self):
         """
         Returns a new Person whose age is twice this Person's age.
         """
-        # TODO: Implement and test this method.
+        older = Person(self.age * 2)
+        return older.age
+        # DONE: Implement and test this method.
 
 
 # -----------------------------------------------------------------------------
