@@ -253,8 +253,10 @@ def problem4b(list_of_tuples_of_strings):
       :type [str]
     """
     for k in range(len(list_of_tuples_of_strings)):
-        if problem4a(list_of_tuples_of_strings[k]) is True:
-            return True
+        for w in range(len(list_of_tuples_of_strings[k])):
+            for q in range(len)
+            if is_prime(len(list_of_tuples_of_strings[w])) is True:
+                return True
     return False
     # -------------------------------------------------------------------------
     # TODO: 4. Implement and test this function.
